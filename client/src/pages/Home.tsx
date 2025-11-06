@@ -4,6 +4,7 @@ import Values from "@/components/Values";
 import DanceStyles from "@/components/DanceStyles";
 import Schedule from '@/components/Schedule';
 import Teachers from '@/components/Teachers';
+import Contact from '@/components/Contact';
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Schedule />
       <Teachers />
       <Pricing />
+      <Contact />
       
       {/* Placeholder for other sections */}
       <section className="min-h-screen flex items-center justify-center">
