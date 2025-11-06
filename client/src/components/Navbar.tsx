@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { XPACE_INFO } from '@/lib/constants';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme, switchable } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,13 +51,28 @@ export default function Navbar() {
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
               />
-              <span className="font-bold text-lg bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hidden sm:inline-block">
+              <span className="font-bold text-lg text-foreground hidden sm:inline-block">
                 {XPACE_INFO.name}
               </span>
             </a>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-6">
+            {/* Theme Toggle */}
+            {switchable && toggleTheme && (
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-muted transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? (
+                  <Sun size={20} className="text-foreground" />
+                ) : (
+                  <Moon size={20} className="text-foreground" />
+                )}
+              </button>
+            )}
+            
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -124,6 +141,26 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
+              
+              {/* Theme Toggle Mobile */}
+              {switchable && toggleTheme && (
+                <button
+                  onClick={toggleTheme}
+                  className="flex items-center gap-3 text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2"
+                >
+                  {theme === 'dark' ? (
+                    <>
+                      <Sun size={20} />
+                      <span>Modo Claro</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon size={20} />
+                      <span>Modo Escuro</span>
+                    </>
+                  )}
+                </button>
+              )}
               
               <div className="flex flex-col gap-3 mt-4">
                 <Button

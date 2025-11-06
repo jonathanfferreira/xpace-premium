@@ -113,7 +113,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                className="inline-block text-primary font-bold"
               >
                 {DANCE_STYLES[currentStyle].name}
               </motion.span>

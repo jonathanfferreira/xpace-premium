@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Values from "@/components/Values";
 import DanceStyles from "@/components/DanceStyles";
+import Schedule from "@/components/Schedule";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Values />
       <DanceStyles />
+      <Schedule />
       <Pricing />
       
       {/* Placeholder for other sections */}

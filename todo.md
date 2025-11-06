@@ -101,3 +101,19 @@
 - [x] Informações de contato clicáveis
 - [x] Link para Google Maps
 - [x] Copyright e CNPJ
+
+## 🐛 Bugs Reportados pelo Usuário
+- [x] Corrigir logo "XPACE" invisível no navbar (gradiente não funciona no dark)
+- [x] Corrigir palavra rotativa invisível no Hero
+- [x] Adicionar botão toggle dark/light theme no navbar
+
+## 📅 Grade de Horários para Implementar
+- [x] Criar seção de horários com dados reais
+- [x] Segunda e Quarta: 4 aulas (18h-21h)
+- [x] Terça e Quinta: 4 aulas (18h30-21h15)
+- [x] Sexta: 2 aulas + Ensaio CIA
+- [x] Sábado: 3 aulas (9h-11h)
+- [x] Adicionar badges de nível (Iniciante, Intermediário, Avançado)
+- [x] Adicionar badge NEW para Dança de Salão
+- [x] Filtros por dia da semana
+- [x] Cards animados com hover effects
