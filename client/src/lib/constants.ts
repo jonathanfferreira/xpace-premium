@@ -83,12 +83,12 @@ export const DANCE_STYLES = [
 ];
 
 export const VALUES = [
-  { name: 'Família', icon: '👨‍👩‍👧‍👦' },
-  { name: 'Respeito', icon: '🤝' },
-  { name: 'Disciplina', icon: '🎯' },
-  { name: 'Diversão', icon: '🎉' },
-  { name: 'Dedicação', icon: '💪' },
-  { name: 'Compromisso', icon: '⭐' }
+  { name: 'Família', icon: 'Users' },
+  { name: 'Respeito', icon: 'Handshake' },
+  { name: 'Disciplina', icon: 'Target' },
+  { name: 'Diversão', icon: 'Smile' },
+  { name: 'Dedicação', icon: 'Activity' },
+  { name: 'Compromisso', icon: 'Award' }
 ];
 
 export const PLANS = {

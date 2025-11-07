@@ -1,5 +1,12 @@
 import { motion } from 'framer-motion';
 import { VALUES } from '@/lib/constants';
+import * as LucideIcons from 'lucide-react';
+
+// Mapeamento para obter o componente do ícone
+const Icon = ({ name, ...props }: { name: keyof typeof LucideIcons, [key: string]: any }) => {
+  const LucideIcon = LucideIcons[name];
+  return LucideIcon ? <LucideIcon {...props} /> : null;
+};
 
 export default function Values() {
   const containerVariants = {
@@ -76,8 +83,8 @@ export default function Values() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
                 {/* Icon */}
-                <div className="relative text-6xl mb-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(155,135,245,0.3)]">
-                  {value.icon}
+                <div className="relative mb-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(155,135,245,0.3)] text-primary">
+                  <Icon name={value.icon as keyof typeof LucideIcons} size={48} strokeWidth={2.5} />
                 </div>
                 
                 {/* Name */}
