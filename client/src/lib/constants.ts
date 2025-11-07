@@ -36,49 +36,65 @@ export const DANCE_STYLES = [
     slug: 'dancas-urbanas',
     name: 'Danças Urbanas',
     description: 'Hip Hop, Breaking, Popping, Locking e toda a cultura urbana. Grooves, freestyle e foundations para todos os níveis.',
-    color: 'from-primary to-secondary'
+    color: 'from-primary to-secondary',
+    audience: 'Para todos os níveis, de iniciantes a avançados. Ideal para quem busca ritmo, expressão e cultura.',
+    learning: 'Técnicas de solo, isolações, grooves, freestyle e história da cultura Hip Hop.'
   },
   {
     slug: 'jazz',
     name: 'Jazz',
     description: 'Estilo clássico com técnica refinada, isolações e expressão artística. Base para diversos estilos de dança.',
-    color: 'from-secondary to-accent'
+    color: 'from-secondary to-accent',
+    audience: 'Recomendado para quem busca aprimoramento técnico, postura e elegância. Todos os níveis.',
+    learning: 'Técnicas de piruetas, saltos, alongamento, postura e coreografias expressivas.'
   },
   {
     slug: 'jazzfunk',
     name: 'Jazz Funk',
     description: 'Mistura do jazz com a estética pop/comercial. Ênfase em precisão, performance e atitude.',
-    color: 'from-accent to-primary'
+    color: 'from-accent to-primary',
+    audience: 'Para quem gosta de danças energéticas e coreografias de videoclipes. Nível intermediário/avançado.',
+    learning: 'Combinações coreográficas, performance, precisão de movimentos e presença de palco.'
   },
   {
     slug: 'heels',
     name: 'Heels',
     description: 'Dança de salto alto combinando técnica, sensualidade e empoderamento. Confiança e expressão feminina.',
-    color: 'from-neon-pink to-secondary'
+    color: 'from-neon-pink to-secondary',
+    audience: 'Para quem busca confiança, sensualidade e técnica em cima do salto. Nível iniciante/intermediário.',
+    learning: 'Técnicas de equilíbrio, postura, movimentos sensuais e coreografias em salto alto.'
   },
   {
     slug: 'contemporaneo',
     name: 'Contemporâneo',
     description: 'Dança expressiva que combina técnicas clássicas e modernas com liberdade criativa e emoção.',
-    color: 'from-primary to-electric-blue'
+    color: 'from-primary to-electric-blue',
+    audience: 'Ideal para quem busca liberdade de movimento e expressão de sentimentos. Todos os níveis.',
+    learning: 'Improvisação, contato e peso, fluidez e técnicas de respiração e movimento.'
   },
   {
     slug: 'danca-de-salao',
     name: 'Dança de Salão',
     description: 'Ritmos latinos e de salão. Samba, salsa, forró, bolero e muito mais para dançar a dois.',
-    color: 'from-accent to-neon-pink'
+    color: 'from-accent to-neon-pink',
+    audience: 'Para quem quer aprender a dançar a dois e se divertir em festas e bailes. Todos os níveis.',
+    learning: 'Passos básicos, condução, musicalidade e etiqueta de salão dos principais ritmos.'
   },
   {
     slug: 'acrobacia',
     name: 'Acrobacia',
     description: 'Movimentos acrobáticos e aéreos. Força, flexibilidade e controle corporal para complementar coreografias.',
-    color: 'from-primary to-accent'
+    color: 'from-primary to-accent',
+    audience: 'Para quem busca força, flexibilidade e elementos acrobáticos para aprimorar a dança. Todos os níveis.',
+    learning: 'Técnicas de solo, aéreos, flexibilidade e segurança na execução de movimentos acrobáticos.'
   },
   {
     slug: 'fitdance',
     name: 'FitDance',
     description: 'Dança fitness com coreografias animadas. Queime calorias enquanto se diverte dançando!',
-    color: 'from-electric-blue to-primary'
+    color: 'from-electric-blue to-primary',
+    audience: 'Para quem busca uma atividade física divertida e com alto gasto calórico. Todos os níveis.',
+    learning: 'Coreografias de diversos ritmos, coordenação motora e condicionamento físico.'
   }
 ];
 

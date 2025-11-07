@@ -88,7 +88,7 @@ export default function DanceStyles() {
             <motion.div
               key={style.slug}
               variants={cardVariants}
-              whileHover={{ scale: 1.03, y: -5 }}
+              whileHover={{ scale: 1.03, rotateX: 5, rotateY: 5, y: -5 }}
               onClick={() => setSelectedStyle(style)}
               className="group relative cursor-pointer"
             >
@@ -183,14 +183,14 @@ export default function DanceStyles() {
                   <div className="bg-muted/30 rounded-xl p-4">
                     <h4 className="font-bold mb-2 text-primary">Para quem é?</h4>
                     <p className="text-muted-foreground">
-                      Aulas disponíveis para todos os níveis, de iniciantes a avançados.
+                      {selectedStyle.audience}
                     </p>
                   </div>
 
                   <div className="bg-muted/30 rounded-xl p-4">
                     <h4 className="font-bold mb-2 text-secondary">O que você vai aprender?</h4>
                     <p className="text-muted-foreground">
-                      Técnica, musicalidade, expressão corporal e coreografias incríveis!
+                      {selectedStyle.learning}
                     </p>
                   </div>
                 </div>
