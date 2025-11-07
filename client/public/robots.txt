@@ -1,0 +1,10 @@
+# robots.txt for XPACE Dance Company
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.xpacecompany.com/sitemap.xml
+
+# Block specific bots if needed
+# User-agent: BadBot
+# Disallow: /

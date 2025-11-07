@@ -135,3 +135,17 @@
 - [ ] Otimizar performance (lazy loading)
 - [ ] Adicionar mais animações de entrada
 - [ ] Testar em diferentes tamanhos de tela
+
+## 🔍 Otimizações de SEO (Joinville)
+- [x] Meta tags otimizadas com palavras-chave locais (Joinville, SC)
+- [x] Title e description focados em "escola de dança Joinville"
+- [x] Schema.org DanceSchool markup completo
+- [x] Open Graph tags para redes sociais
+- [x] Twitter Card tags
+- [x] Sitemap.xml para indexação
+- [x] robots.txt otimizado
+- [x] Canonical URLs
+- [x] Geo tags (latitude/longitude Joinville)
+- [x] Horários de funcionamento no Schema
+- [x] Catálogo de serviços (modalidades)
+- [ ] Alt text em todas as imagens
