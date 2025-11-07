@@ -11,6 +11,7 @@ const DanceStyles = lazy(() => import("@/components/DanceStyles"));
 const Schedule = lazy(() => import("@/components/Schedule"));
 const Teachers = lazy(() => import("@/components/Teachers"));
 const Pricing = lazy(() => import("@/components/Pricing"));
+const Timeline = lazy(() => import("@/components/Timeline"));
 const Contact = lazy(() => import("@/components/Contact"));
 import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -27,6 +28,7 @@ export default function Home() {
         <DanceStyles />
         <Schedule />
         <Teachers />
+        <Timeline />
         <Pricing />
         <Contact />
       </Suspense>
