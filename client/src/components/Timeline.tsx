@@ -10,33 +10,33 @@ interface AwardItem {
 
 const AWARDS: AwardItem[] = [
   {
-    year: 2023,
-    title: 'Campeã Nacional - Hip Hop',
-    description: 'Conquista do 1º lugar na categoria Hip Hop no Festival Nacional de Dança de Joinville.',
+    year: 2025,
+    title: 'Hip Hop International (HHI) - Pódio Histórico',
+    description: '2º lugar na categoria Mini Crew (atrás apenas do The Power Music Dance), 2º lugar na categoria Junior e 5º lugar na categoria Adult. Pela primeira vez, a XPACE classifica 3 dos 4 trabalhos levados ao mundial, um marco grandioso para a escola e para Joinville. Coreógrafo: Jhonney.',
     highlight: true,
   },
   {
-    year: 2023,
-    title: 'Melhor Coreografia Jazz Funk',
-    description: 'Reconhecimento pela coreografia inovadora no estilo Jazz Funk no Festival de Dança de Santa Catarina.',
-    highlight: false,
-  },
-  {
-    year: 2022,
-    title: 'Prêmio Revelação',
-    description: 'A XPACE foi eleita a Escola Revelação do ano pelo Conselho Estadual de Dança.',
+    year: 2025,
+    title: 'Festival de Dança de Joinville - Feito Inédito',
+    description: '2º lugar no Solo Masculino Sênior (Marcelinho, coreógrafos Jhonney e Eduardo Alcântara) e 3 coreografias autorais aprovadas na mostra competitiva (Danças Urbanas). Feito inédito para grupos urbanos de Joinville.',
     highlight: true,
   },
   {
-    year: 2021,
-    title: 'Top 3 - Danças Urbanas',
-    description: 'Classificação entre as 3 melhores escolas na competição regional de Danças Urbanas.',
-    highlight: false,
+    year: 2025,
+    title: 'Festival Internacional de Hip Hop (FIH2)',
+    description: '2º lugar no Conjunto Sênior com a Coreografia "Guia" na Categoria Avançada. Único grupo de Joinville a conquistar o 2º lugar nesta categoria. Coreógrafos: Jhonney e Ruan Amorim.',
+    highlight: true,
   },
   {
-    year: 2020,
-    title: 'Inauguração da Sede Própria',
-    description: 'Mudança para a nova e moderna sede, ampliando a capacidade de aulas e eventos.',
+    year: 2025,
+    title: 'Hip Hop Unite Brasil - Seleção Brasileira',
+    description: '1º lugar Duo Cadet, 1º lugar Duo Júnior e 1º lugar Small Crew Cadet. Com essas conquistas, a XPACE se tornou parte oficial da Seleção Brasileira de Hip Hop no Hip Hop Unite. Todas as coreografias do coreógrafo Jhonney.',
+    highlight: true,
+  },
+  {
+    year: 2024,
+    title: 'Hip Hop Unite Brasil',
+    description: '1º lugar Duo Júnior, 1º lugar Small Crew Cadet e 2º lugar Small Crew Júnior. Todas as coreografias do coreógrafo Jhonney.',
     highlight: true,
   },
 ];
@@ -93,7 +93,7 @@ export default function Timeline() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Uma história de dedicação, talento e reconhecimento nos palcos do Brasil.
+            Uma história de dedicação, talento e reconhecimento nos palcos do Brasil e do Mundo.
           </p>
         </motion.div>
 
