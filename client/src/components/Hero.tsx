@@ -79,7 +79,7 @@ export default function Hero() {
               className="inline-block"
             >
               <div className="px-4 py-2 rounded-full bg-xpace-purple/10 border border-xpace-purple/30 backdrop-blur-sm">
-                <span className="text-sm font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="text-sm font-medium text-xpace-purple">
                   Matrículas abertas • Joinville/SC
                 </span>
               </div>

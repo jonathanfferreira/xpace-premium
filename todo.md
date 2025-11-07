@@ -149,3 +149,7 @@
 - [x] Horários de funcionamento no Schema
 - [x] Catálogo de serviços (modalidades)
 - [ ] Alt text em todas as imagens
+
+## 🐛 Bugs de Visibilidade Reportados
+- [x] Corrigir "Matrículas abertas • Joinville/SC" aparecendo só no hover
+- [x] Corrigir títulos dos estilos de dança aparecendo só no hover

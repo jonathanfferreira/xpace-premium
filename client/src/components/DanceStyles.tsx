@@ -98,7 +98,7 @@ export default function DanceStyles() {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-secondary transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-xpace-purple transition-colors duration-300">
                     {style.name}
                   </h3>
                   <p className="text-sm text-muted-foreground line-clamp-3">
