@@ -1,6 +1,16 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
 
+// Função para normalizar o nome e obter o caminho da imagem
+const getTeacherImagePath = (name: string) => {
+  const normalizedName = name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s/g, "");
+  return `/images/teachers/${normalizedName}.jpg`;
+};
+
 interface Teacher {
   name: string;
   styles: string[];
@@ -91,9 +101,17 @@ export default function Teachers() {
               className="group"
             >
               <div className="relative bg-card border border-border rounded-2xl p-6 h-full flex flex-col items-center text-center transition-all duration-300 hover:border-xpace-purple/50 hover:shadow-xl hover:shadow-xpace-purple/10">
-                {/* Avatar Placeholder */}
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-xpace-purple to-xpace-orange mb-4 flex items-center justify-center text-2xl font-black text-white">
-                  {teacher.name.split(' ').map(n => n[0]).join('')}
+                {/* // Avatar
+                <div className="w-20 h-20 rounded-full mb-4 overflow-hidden border-2 border-xpace-purple/50 shadow-lg shadow-xpace-purple/20">
+                  <img
+                    src={getTeacherImagePath(teacher.name)}
+                    alt={teacher.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null; // Evita loop infinito
+                      e.currentTarget.src = '/04.png'; // Imagem de fallback
+                    }}
+                  />
                 </div>
 
                 {/* Name */}
