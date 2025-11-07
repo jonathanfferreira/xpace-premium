@@ -1,42 +1,33 @@
 import { motion } from 'framer-motion';
 import { Instagram } from 'lucide-react';
 
-// Função para normalizar o nome e obter o caminho da imagem
-const getTeacherImagePath = (name: string) => {
-  const normalizedName = name
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\s/g, "");
-  return `/images/teachers/${normalizedName}.jpg`;
-};
-
 interface Teacher {
   name: string;
   styles: string[];
   ig: string;
+  image: string; // Novo campo para o caminho da imagem
 }
 
 const TEACHERS: Teacher[] = [
-  { name: 'Alana Veiga', styles: ['Hip Hop'], ig: 'veigalanaa' },
-  { name: 'Alisson Felipe', styles: ['Hip Hop'], ig: 'alissonfelipes' },
-  { name: 'Alisson Morpheu', styles: ['Locking'], ig: 'alisson_morpheu' },
-  { name: 'Bianca Marcela', styles: ['Contemporâneo', 'Jazz'], ig: 'biancamarceela' },
-  { name: 'Dil', styles: ['Vogue', 'Jazz Funk', 'Waacking', 'Hip Hop', 'House'], ig: 'dilschulz' },
-  { name: 'Duda Biz', styles: ['Hip Hop'], ig: 'dudabizs' },
-  { name: 'Eduarda Rodrigues', styles: ['Jazz Funk', 'Heels'], ig: 'eduarda.r.l' },
-  { name: 'Engels', styles: ['Vogue', 'Waacking', 'Jazz Funk'], ig: 'engelsmatheus_' },
-  { name: 'Gus', styles: ['Waacking', 'Jazz Funk', 'House'], ig: 'gusjoesting' },
-  { name: 'Guilherme Riku', styles: ['Acrobacias'], ig: 'guilhermeriku' },
-  { name: 'Isis', styles: ['Hip Hop'], ig: 'isislkr' },
-  { name: 'Jhonney', styles: ['Hip Hop', 'Dancehall', 'Jazz Funk', 'Waacking'], ig: 'jhonney.xp' },
-  { name: 'Lóren Stefany', styles: ['Hip Hop', 'House'], ig: 'ftloren' },
-  { name: 'Lucas Maciel', styles: ['Dancehall'], ig: 'lucasmacieldx' },
-  { name: 'Marcelinho', styles: ['Hip Hop'], ig: 'marcelinho_hiphop' },
-  { name: 'Natália Lessin', styles: ['Ritmos'], ig: 'nataliatflessin' },
-  { name: 'Ruan Amorim', styles: ['Hip Hop', 'House'], ig: 'ruan_amrm' },
-  { name: 'Ruan Santos', styles: ['Hip Hop'], ig: 'ruansanttoz' },
-  { name: 'Samuel Maros', styles: ['Danças Urbanas'], ig: 'samuzek' }
+  { name: 'Alana Veiga', styles: ['Hip Hop'], ig: 'veigalanaa', image: '/images/teachers/alana.jpg' },
+  { name: 'Alisson Felipe', styles: ['Hip Hop'], ig: 'alissonfelipes', image: '/images/teachers/alissonfelipe.jpg' },
+  { name: 'Alisson Morpheu', styles: ['Locking'], ig: 'alisson_morpheu', image: '/images/teachers/alissonmorpheu.jpg' },
+  { name: 'Bianca Marcela', styles: ['Contemporâneo', 'Jazz'], ig: 'biancamarceela', image: '/images/teachers/bianca.jpg' },
+  { name: 'Dil', styles: ['Vogue', 'Jazz Funk', 'Waacking', 'Hip Hop', 'House'], ig: 'dilschulz', image: '/images/teachers/dil.jpg' },
+  { name: 'Duda Biz', styles: ['Hip Hop'], ig: 'dudabizs', image: '/images/teachers/dudabiz.jpg' },
+  { name: 'Eduarda Rodrigues', styles: ['Jazz Funk', 'Heels'], ig: 'eduarda.r.l', image: '/images/teachers/eduarda.jpg' },
+  { name: 'Engels', styles: ['Vogue', 'Waacking', 'Jazz Funk'], ig: 'engelsmatheus_', image: '/images/teachers/engels.jpg' },
+  { name: 'Gus', styles: ['Waacking', 'Jazz Funk', 'House'], ig: 'gusjoesting', image: '/images/teachers/gus.jpg' },
+  { name: 'Guilherme Riku', styles: ['Acrobacias'], ig: 'guilhermeriku', image: '/images/teachers/guilhermeriku.jpg' },
+  { name: 'Isis', styles: ['Hip Hop'], ig: 'isislkr', image: '/images/teachers/isis.jpg' },
+  { name: 'Jhonney', styles: ['Hip Hop', 'Dancehall', 'Jazz Funk', 'Waacking'], ig: 'jhonney.xp', image: '/images/teachers/jhonney.jpg' },
+  { name: 'Lóren Stefany', styles: ['Hip Hop', 'House'], ig: 'ftloren', image: '/images/teachers/loren.jpg' },
+  { name: 'Lucas Maciel', styles: ['Dancehall'], ig: 'lucasmacieldx', image: '/images/teachers/lucasmaciel.jpg' },
+  { name: 'Marcelinho', styles: ['Hip Hop'], ig: 'marcelinho_hiphop', image: '/images/teachers/marcelinho.jpg' },
+  { name: 'Natália Lessin', styles: ['Ritmos'], ig: 'nataliatflessin', image: '/images/teachers/natalialessin.jpg' },
+  { name: 'Ruan Amorim', styles: ['Hip Hop', 'House'], ig: 'ruan_amrm', image: '/images/teachers/ruanamorim.jpg' },
+  { name: 'Ruan Santos', styles: ['Hip Hop'], ig: 'ruansanttoz', image: '/images/teachers/ruansantos.jpg' },
+  { name: 'Samuel Maros', styles: ['Danças Urbanas'], ig: 'samuzek', image: '/images/teachers/samuelmaros.jpg' }
 ];
 
 export default function Teachers() {
@@ -104,7 +95,7 @@ export default function Teachers() {
                 {/* // Avatar
                 <div className="w-20 h-20 rounded-full mb-4 overflow-hidden border-2 border-xpace-purple/50 shadow-lg shadow-xpace-purple/20">
                   <img
-                    src={getTeacherImagePath(teacher.name)}
+                    src={teacher.image}
                     alt={teacher.name}
                     className="w-full h-full object-cover"
                     onError={(e) => {
