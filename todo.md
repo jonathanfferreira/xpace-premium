@@ -153,3 +153,7 @@
 ## 🐛 Bugs de Visibilidade Reportados
 - [x] Corrigir "Matrículas abertas • Joinville/SC" aparecendo só no hover
 - [x] Corrigir títulos dos estilos de dança aparecendo só no hover
+
+## 🐛 Bugs Seção Planos
+- [x] Valores dos planos não estão aparecendo
+- [x] Texto "custo benefício" mal posicionado/enquadrado

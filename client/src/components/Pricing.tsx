@@ -93,8 +93,8 @@ export default function Pricing() {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="px-4 py-1 bg-gradient-to-r from-accent to-primary rounded-full text-sm font-bold text-background flex items-center gap-2 shadow-lg">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10 w-max">
+                  <div className="px-5 py-2 bg-gradient-to-r from-xpace-orange to-xpace-purple rounded-full text-sm font-bold text-white flex items-center gap-2 shadow-lg whitespace-nowrap">
                     <Sparkles size={16} />
                     {plan.highlight}
                   </div>
@@ -121,7 +121,7 @@ export default function Pricing() {
                   {/* Price */}
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-5xl font-black bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      <span className="text-5xl font-black text-xpace-purple">
                         R$ {plan.prices[frequency]}
                       </span>
                       <span className="text-muted-foreground">/mês</span>
