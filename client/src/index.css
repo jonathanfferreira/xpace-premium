@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -9,14 +9,14 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   
-  /* XPACE Brand Colors */
-  --color-xpace-purple: #9b87f5;
-  --color-xpace-purple-light: #c89fff;
-  --color-xpace-orange: #ff8c53;
-  --color-gold: #FFD700;
-  --color-neon-purple: #B026FF;
-  --color-neon-pink: #FF006E;
-  --color-electric-blue: #00D9FF;
+  /* XPACE Official Brand Colors */
+  --color-xpace-orange: #ff5200;
+  --color-xpace-blue: #2300d0;
+  --color-xpace-purple: #6324b2;
+  --color-xpace-pink: #eb00bc;
+  --color-xpace-gray-light: #e6e6e6;
+  --color-xpace-gray-medium: #979797;
+  --color-xpace-black: #000000;
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -53,19 +53,18 @@
 }
 
 :root {
-  /* XPACE Premium Colors - Purple & Orange Theme */
-  --primary: 262 75% 75%; /* #9b87f5 - Roxo XPACE */
-  --primary-foreground: 220 25% 4%;
-  --secondary: 270 100% 81%; /* #c89fff - Roxo claro */
-  --secondary-foreground: 220 25% 4%;
-  --accent: 20 100% 66%; /* #ff8c53 - Laranja vibrante */
-  --accent-foreground: 220 25% 4%;
+  /* XPACE Official Brand Colors */
+  --primary: 262 83% 43%; /* #6324b2 - Roxo XPACE oficial */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 228 100% 41%; /* #2300d0 - Azul royal */
+  --secondary-foreground: 0 0% 100%;
+  --accent: 18 100% 50%; /* #ff5200 - Laranja oficial */
+  --accent-foreground: 0 0% 100%;
   
-  /* Extended Premium Colors */
-  --gold: 51 100% 50%; /* #FFD700 */
-  --neon-purple: 283 100% 56%; /* #B026FF */
-  --neon-pink: 334 100% 50%; /* #FF006E */
-  --electric-blue: 188 100% 50%; /* #00D9FF */
+  /* Extended Brand Colors */
+  --xpace-pink: 313 100% 46%; /* #eb00bc - Pink oficial */
+  --xpace-gray-light: 0 0% 90%; /* #e6e6e6 */
+  --xpace-gray-medium: 0 0% 59%; /* #979797 */
   --success: 142 76% 36%; /* #25D366 - WhatsApp */
   
   --radius: 1rem; /* 16px - Premium rounded */
@@ -171,6 +170,47 @@
   --chart-5: 188 100% 50%;
 }
 
+/* Chillax Font Family */
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Variable.ttf') format('truetype-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chillax';
+  src: url('/fonts/Chillax-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -180,12 +220,12 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Chillax', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Chillax', sans-serif;
     font-weight: 700;
   }
   button:not(:disabled),
@@ -202,24 +242,33 @@
 }
 
 @layer utilities {
-  /* XPACE Brand Color Utilities */
-  .text-xpace-purple { color: #9b87f5 !important; }
-  .text-xpace-orange { color: #ff8c53 !important; }
-  .bg-xpace-purple { background-color: #9b87f5 !important; }
-  .bg-xpace-orange { background-color: #ff8c53 !important; }
-  .border-xpace-purple { border-color: #9b87f5 !important; }
-  .border-xpace-orange { border-color: #ff8c53 !important; }
+  /* XPACE Official Brand Color Utilities */
+  .text-xpace-purple { color: #6324b2 !important; }
+  .text-xpace-orange { color: #ff5200 !important; }
+  .text-xpace-blue { color: #2300d0 !important; }
+  .text-xpace-pink { color: #eb00bc !important; }
+  .bg-xpace-purple { background-color: #6324b2 !important; }
+  .bg-xpace-orange { background-color: #ff5200 !important; }
+  .bg-xpace-blue { background-color: #2300d0 !important; }
+  .bg-xpace-pink { background-color: #eb00bc !important; }
+  .border-xpace-purple { border-color: #6324b2 !important; }
+  .border-xpace-orange { border-color: #ff5200 !important; }
+  .border-xpace-blue { border-color: #2300d0 !important; }
   
-  .bg-xpace-purple\/10 { background-color: rgba(155, 135, 245, 0.1) !important; }
-  .bg-xpace-orange\/10 { background-color: rgba(255, 140, 83, 0.1) !important; }
-  .border-xpace-purple\/30 { border-color: rgba(155, 135, 245, 0.3) !important; }
+  .bg-xpace-purple\/10 { background-color: rgba(99, 36, 178, 0.1) !important; }
+  .bg-xpace-orange\/10 { background-color: rgba(255, 82, 0, 0.1) !important; }
+  .border-xpace-purple\/30 { border-color: rgba(99, 36, 178, 0.3) !important; }
   
   .gradient-xpace {
-    background: linear-gradient(135deg, #9b87f5 0%, #ff8c53 100%) !important;
+    background: linear-gradient(135deg, #ff5200 0%, #6324b2 50%, #2300d0 100%) !important;
+  }
+  
+  .gradient-xpace-alt {
+    background: linear-gradient(135deg, #6324b2 0%, #2300d0 100%) !important;
   }
   
   .gradient-xpace-text {
-    background: linear-gradient(135deg, #9b87f5 0%, #c89fff 50%, #ff8c53 100%);
+    background: linear-gradient(135deg, #ff5200 0%, #6324b2 50%, #2300d0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

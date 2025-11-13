@@ -78,8 +78,8 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="inline-block"
             >
-              <div className="px-4 py-2 rounded-full bg-xpace-purple/10 border border-xpace-purple/30 backdrop-blur-sm">
-                <span className="text-sm font-medium text-xpace-purple">
+              <div className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm">
+                <span className="text-sm font-medium text-primary">
                   Matrículas abertas • Joinville/SC
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block text-xpace-purple font-bold"
+                className="inline-block text-primary font-bold"
               >
                 {DANCE_STYLES[currentStyle].name}
               </motion.span>
@@ -136,7 +136,7 @@ export default function Hero() {
             >
               <Button
                 size="lg"
-                className="gradient-xpace text-white hover:opacity-90 transition-opacity shadow-lg shadow-xpace-purple/30 font-bold"
+                className="gradient-xpace text-white hover:opacity-90 transition-opacity shadow-lg shadow-primary/30 font-bold"
                 asChild
               >
                 <a
@@ -150,7 +150,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-xpace-purple/50 text-xpace-purple hover:bg-xpace-purple/10 font-bold"
+                className="border-primary/50 text-primary hover:bg-primary/10 font-bold"
                 asChild
               >
                 <a href="#horarios">Ver horários</a>

@@ -22,25 +22,33 @@ export function ThemeProvider({
   switchable = false,
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    if (switchable) {
-      const stored = localStorage.getItem("theme");
-      return (stored as Theme) || defaultTheme;
+    if (switchable && typeof window !== 'undefined') {
+      try {
+        const stored = localStorage.getItem("theme");
+        return (stored as Theme) || defaultTheme;
+      } catch {
+        return defaultTheme;
+      }
     }
     return defaultTheme;
   });
 
+  // Aplicar tema inicial imediatamente
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    } else {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    }
+    
+    // Remover ambas as classes primeiro
+    root.classList.remove("dark", "light");
+    
+    // Adicionar a classe correta
+    root.classList.add(theme);
 
-    if (switchable) {
-      localStorage.setItem("theme", theme);
+    if (switchable && typeof window !== 'undefined') {
+      try {
+        localStorage.setItem("theme", theme);
+      } catch {
+        // Ignorar erros de localStorage
+      }
     }
   }, [theme, switchable]);
 

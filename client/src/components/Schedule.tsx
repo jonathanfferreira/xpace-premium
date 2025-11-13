@@ -54,11 +54,11 @@ const SCHEDULE_DATA: DaySchedule[] = [
 const getLevelColor = (level: string) => {
   switch (level) {
     case 'Iniciante':
-      return 'bg-green-500/20 text-green-400 border-green-500/30';
+      return 'bg-xpace-blue/20 text-xpace-blue border-xpace-blue/30';
     case 'Intermediário':
-      return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+      return 'bg-xpace-purple/20 text-xpace-purple border-xpace-purple/30';
     case 'Avançado':
-      return 'bg-red-500/20 text-red-400 border-red-500/30';
+      return 'bg-xpace-orange/20 text-xpace-orange border-xpace-orange/30';
     default:
       return 'bg-primary/20 text-primary border-primary/30';
   }

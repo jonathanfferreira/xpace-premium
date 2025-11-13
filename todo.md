@@ -157,3 +157,23 @@
 ## 🐛 Bugs Seção Planos
 - [x] Valores dos planos não estão aparecendo
 - [x] Texto "custo benefício" mal posicionado/enquadrado
+
+## 🐛 Bug Toggle de Tema
+- [ ] Site não está alternando para o modo claro quando clica no toggle
+
+## 🎨 ATUALIZAÇÃO DE IDENTIDADE VISUAL OFICIAL
+- [x] Extrair e instalar fonte Chillax do arquivo ZIP
+- [x] Atualizar paleta de cores para identidade XPACE oficial
+  - [x] Laranja principal: #ff5200
+  - [x] Azul royal: #2300d0
+  - [x] Roxo: #6324b2
+  - [x] Pink/Magenta: #eb00bc
+  - [x] Cinza claro: #e6e6e6
+  - [x] Preto: #000000
+  - [x] Cinza médio: #979797
+- [x] Substituir fonte Poppins por Chillax como fonte principal
+- [x] Atualizar badges de nível/modalidade com novo estilo visual
+- [x] Ajustar gradientes conforme identidade (laranja→roxo→azul)
+- [x] Revisar elementos visuais principais (Hero, Schedule, Pricing)
+- [ ] Aplicar bordas arredondadas conforme design system
+- [ ] Atualizar cards de professores com estilo da identidade
