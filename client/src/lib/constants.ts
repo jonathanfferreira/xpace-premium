@@ -1,7 +1,7 @@
 // XPACE Dance Company - Constants
 
 export const XPACE_INFO = {
-  name: "XPACE Dance Company",
+  name: "XPACE Escola de Dança",
   tagline: "A escola de dança que multiplica talentos",
   location: {
     address: "R. do Ouro, 185 - Iririú",

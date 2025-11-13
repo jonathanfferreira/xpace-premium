@@ -177,3 +177,9 @@
 - [x] Revisar elementos visuais principais (Hero, Schedule, Pricing)
 - [ ] Aplicar bordas arredondadas conforme design system
 - [ ] Atualizar cards de professores com estilo da identidade
+
+## 📝 Ajuste de Nome
+- [x] Alterar "Dance Company" para "XPACE Escola de Dança" no Hero
+- [x] Atualizar constantes (XPACE_INFO.name)
+- [x] Atualizar meta tags (title, description)
+- [x] Atualizar Schema.org markup
