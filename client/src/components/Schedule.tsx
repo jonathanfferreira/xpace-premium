@@ -147,6 +147,7 @@ export default function Schedule() {
 
         {/* Schedule Grid */}
         <motion.div
+          key={selectedDay || 'all'}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
