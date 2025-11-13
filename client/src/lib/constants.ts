@@ -11,7 +11,7 @@ export const XPACE_INFO = {
     fullAddress: "R. do Ouro, 185 - Iririú, Joinville - SC, 89227-002"
   },
   contact: {
-    email: "xpacedancecompany@gmail.com",
+    email: "financeiro@xpacecompany.com",
     phone: "+55 47 99946-3474",
     whatsapp: "5547999463474",
     cnpj: "30.006.509/0001-02"
