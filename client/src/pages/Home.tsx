@@ -1,5 +1,6 @@
 
 import { lazy, Suspense } from 'react';
+import { usePageTitle } from "@/hooks/usePageTitle";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Hero from "@/components/Hero";
@@ -18,6 +19,7 @@ import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
+  usePageTitle("Xpace Company - Início");
   return (
     <div className="min-h-screen">
       <ScrollProgress />
