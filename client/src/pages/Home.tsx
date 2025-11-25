@@ -1,20 +1,21 @@
 
 import { lazy, Suspense } from 'react';
 import Navbar from "@/components/Navbar";
-import About from "@/components/About";
 import Hero from "@/components/Hero";
-import Xpaceflix from "@/components/Xpaceflix"; // Importando o novo componente
-
-import Footer from "@/components/Footer";
 
 // Lazy Loaded Components
+const About = lazy(() => import("@/components/About"));
+const Testimonials = lazy(() => import("@/components/Testimonials"));
 const Values = lazy(() => import("@/components/Values"));
 const DanceStyles = lazy(() => import("@/components/DanceStyles"));
 const Schedule = lazy(() => import("@/components/Schedule"));
 const Teachers = lazy(() => import("@/components/Teachers"));
-const Pricing = lazy(() => import("@/components/Pricing"));
 const Timeline = lazy(() => import("@/components/Timeline"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const Xpaceflix = lazy(() => import("@/components/Xpaceflix"));
 const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
+
 import ScrollProgress from "@/components/ScrollProgress";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
@@ -27,27 +28,19 @@ export default function Home() {
       <WhatsAppButton />
       <Navbar />
       <Hero />
-      <Xpaceflix /> {/* Adicionando o componente aqui */}
-      <About />
       <Suspense fallback={null}>
+        <About />
+        <Testimonials />
         <Values />
         <DanceStyles />
         <Schedule />
         <Teachers />
         <Timeline />
         <Pricing />
+        <Xpaceflix />
         <Contact />
+        <Footer />
       </Suspense>
-      
-      {/* Placeholder for other sections */}
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-4">Mais seções em breve...</h2>
-          <p className="text-muted-foreground">Professores, Horários e Galeria!</p>
-        </div>
-      </section>
-      
-      <Footer />
     </div>
   );
 }

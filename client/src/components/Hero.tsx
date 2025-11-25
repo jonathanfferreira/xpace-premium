@@ -95,8 +95,12 @@ export default function Hero() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <Button asChild size="lg" className="group">
-                      <a href="#horarios">
-                        Ver Horários
+                      <a 
+                        href="https://wa.me/5547999463474?text=Olá!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20na%20XPACE."
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Agendar Aula Experimental
                         <ChevronRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
                       </a>
                     </Button>
