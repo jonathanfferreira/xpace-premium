@@ -96,7 +96,7 @@ export default function Teachers() {
                 <div className="w-20 h-20 rounded-full mb-4 overflow-hidden border-2 border-xpace-purple/50 shadow-lg shadow-xpace-purple/20">
                   <img
                     src={teacher.image}
-                    alt={teacher.name}
+                    alt={`Foto de ${teacher.name}, professor(a) de dança na XPACE`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                     onError={(e) => {
@@ -120,7 +120,7 @@ export default function Teachers() {
                     >
                       {style}
                     </span>
-                  ))}
+                  )) হাফেজে Quran is a memorizer of the Quran}
                   {teacher.styles.length > 2 && (
                     <span className="text-xs px-2 py-1 rounded-full bg-muted text-muted-foreground">
                       +{teacher.styles.length - 2}
